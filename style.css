@@ -1,0 +1,526 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+::selection{
+    color: #fff;
+    background: #8d2f00ad;
+}
+@font-face {
+    font-family: handwriting;
+    src: url(./fonts/ShadowsIntoLight-Regular.ttf);
+}
+
+@font-face {
+    font-family: tcs;
+    src: url(./fonts/HouschkaRoundedAlt-Medium.ttf);
+}
+
+@font-face {
+    font-family: normal;
+    src: url(./fonts/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2);
+}
+
+@font-face {
+    font-family: solid;
+    src: url(./fonts/fa-solid-900.woff2);
+}
+@font-face{
+    font-family: heading;
+    src: url(./fonts/2423AnotherTypewriter.woff2);
+}
+.heading{
+    text-align: center;
+    font-family: heading;
+    color: #554546;
+    font-weight: bold;
+    font-size: 5vh;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    height: 13vh;
+    /* background: #e3e3e308 !important; */
+    /* backdrop-filter: blur(5px); */
+}
+
+.navbar-nav {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1%;
+    padding: 0 5% 0 1%;
+}
+
+.logoItem {
+    margin: 0 2%;
+}
+
+.logo {
+    height: 13vh !important;
+
+}
+
+.nav-link {
+    color: #f3efeb;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: arial;
+    font-size: 15px;
+    overflow: hidden;
+    position: relative;
+}
+.nav-link:hover{
+    color: #f1f1f1;
+}
+.nav-link::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background: #554546;
+    bottom: 0%;
+    transform: scale(0);
+    border-radius: 20px;
+    left: 0;
+    transition: 0.25s;
+
+}
+.nav-link:hover::after{
+    transform: scale(1);
+}
+
+#navbar.scroll-on{
+    position: fixed;
+    background-color: #f9f9f9 !important;
+    
+}
+#navbar.scroll-on .nav-link,#navbar.scroll-on #menubtn{
+    color: #554546;
+}
+
+#page1 {
+    height: 100vh;
+    position: relative;
+    /* width: 100vw; */
+    background: url(./Images/bg7.jpg) center center/cover;
+}
+
+.page1Bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding: 0;
+    top: 0;
+    left: 0;
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: tcs;
+    color: white;
+    position: relative;
+}
+/* #intro img:hover {
+    transform: rotate(0deg);
+} */
+
+.green {
+    width: 12vw;
+    bottom: 10% !important;
+    left: 20%;
+    z-index: 1;
+    transform: rotate(20deg) scale(1);
+    /* height: 70%; */
+    /* z-index: 99; */
+    filter: drop-shadow(10px 10px 20px #0505057d) brightness(0.9);
+    position: absolute;
+    
+}
+
+/* .white {
+    right: -10%;
+    transform: rotate(-20deg);
+    height: 50%;
+    filter: drop-shadow(-60px 10px 20px #0505057d);
+
+} */
+
+#intro h1 {
+    font-family: heading;
+    font-size: 8vw;
+    color: #ffffffdb;
+}
+
+#intro h2 {
+    font-family: solid    ;
+    letter-spacing: 4px;
+    word-spacing: 2px;
+    text-wrap: nowrap;
+    z-index: 9;
+}
+
+#intro h2 span {
+    background: #ec610adc;
+    padding: 2%;
+    border-radius: 5px;
+    color: #554546;
+    backdrop-filter: blur(5px);
+}
+
+#intro h4 {
+    text-transform: capitalize;
+    text-wrap: nowrap;
+    text-align: center;
+    margin-top: 2%;
+    font-weight: bold;
+    z-index: 9;
+}
+
+#page2 {
+    padding: 5% 0 4%;
+    background: #ffffff;
+    text-align: center;
+}
+
+
+
+#countryDiv {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    transform-style: preserve-3d;
+}
+
+.btn {
+    /* border: 1px solid #830000; */
+    font-family: tcs;
+    border-radius: 30px;
+    padding: 1% 2%;
+    position: relative;
+    overflow: hidden;
+    font-weight: 650;
+    box-shadow: 0px 20px 35px 2px #00000038;
+    perspective: 400px;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+.btn span {
+    z-index: 9;
+    position: relative;
+}
+.btn::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    background: radial-gradient(#f6b99a, #dc4900);
+    transition: 0.25s;
+    z-index: 1;
+
+}
+
+.btn:hover::after {
+    border-radius: 0%;
+    bottom: 0;
+}
+
+#countryDiv p {
+    font-size: 25px;
+    text-wrap: wrap;
+}
+
+.signature {
+    margin-top: 2%;
+    width: 400px;
+    box-shadow: 0 -10px 30px #27272727;
+}
+
+#page3 {
+    padding: 8% 4% 4%;
+    /* height: 80vh; */
+    background: url(./Images/bg5-1.jpg) no-repeat center/cover;
+    color: white;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    flex-direction: row-reverse;
+    /* transform-style: preserve-3d; */
+}
+#page3Div{
+    background: #ffffff1c;
+    padding: 3% 2% 6%;
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    box-shadow: 0 0 40px 10px #ffffff38 ;
+    
+}
+#page3 h2 {
+    font-family: solid;
+    letter-spacing: 4px;
+    
+}
+#page3 h2 span{
+    text-decoration: underline;
+    text-decoration-color: #b9011f;
+    text-underline-offset: 10px;
+}
+#page3 h6{
+    font-size: 20px;
+    width: 70%;
+    font-family: tcs;
+    font-weight: 600;
+    margin: 3% 0;
+}
+
+#page3 p{
+    width: 80%;
+    font-family: tcs;
+    font-size: 20px;
+    text-align: justify;
+    margin: 15% 0 2%;
+}
+.btnSec .btn{
+    margin-right: 3%;
+    color: white;
+    padding: 2% 4%;
+}
+#page4{
+    position: relative;
+    padding: 8% 2%;
+}
+#page4Div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#page4Div h5{
+    color: #554546;
+    margin: 2%;
+    font-weight: 650;
+    font-family: tcs;
+}
+#bottles{
+    width: 100%;
+    margin: 2% 0;
+}
+#proof{
+    position: absolute;
+}
+.bottle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.bottleName{
+    z-index:1;
+    top: -50%;
+    position: absolute;
+    height: 150px;
+    width: 200px;
+}
+#floatBottle{
+    position: absolute;
+    top: 20%;
+    z-index: 0;
+    filter: brightness(0.8);
+}
+#proof{
+    transform: scale(0.8);
+}
+#cask{
+    transform: scale(0.8);
+}
+.bottle img{
+    filter: drop-shadow(20px -10px 25px #0000009e);
+}
+.bottle h5{
+    margin: 5% 0 0;
+    width: 60%;
+    text-wrap: wrap;
+    color: #fff !important;
+    z-index: 2;
+}
+
+.bottle .btn{
+    margin: 10% 0 5%;
+    width: 150px;
+    padding: 5% 0;
+    text-wrap: nowrap;
+    z-index: 2;
+    color: rgb(51, 50, 50);
+}
+#label{
+    margin: 5% 0;
+    width: 25vw;
+    background: #ffffff;
+    padding: 1%;
+    /* border: 1px solid black; */
+    position: absolute;
+    box-shadow: 0 0 20px #00000038;
+    top: -15%;
+    left: 35%;
+}
+
+#page5{
+    background: url(./Images/glasspour.jpg) center center/cover;
+    background-attachment: fixed;
+    padding: 4% 0;
+    position: relative;
+    justify-content: center;
+}
+#page5Div{
+    /* height: 70vh; */
+    gap: 2vh;
+}
+.awards{
+    background: #ffffff82;
+    backdrop-filter: blur(4px);
+    padding: 1%;
+    border-radius: 10px;
+
+}
+
+#page6{
+    padding: 8% 5% 5%;
+    background: white;
+}
+#page6Div{
+    display: flex;
+    flex-direction: column  ;
+    align-items: center;
+
+}
+#page6 p{
+    font-size: 1.2vw;
+    margin: 2% 0;
+    font-family: tcs;
+    width: 90%;
+    text-align: center;
+}
+.ways{
+    color: #554546;
+    position: relative;
+    text-align: center;
+}
+.ways::after{
+    content: url();
+    width: 30px;
+    height: 30px;
+    background: #554546;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #554546;
+    top: -2%;
+    left: 0%;
+
+}
+.ways h5{
+    margin: 5% 0;
+    font-weight: 700;
+    font-family: tcs;
+}
+
+#page6 .btn{
+    margin: 80% 0 5%;
+    width: 150px;
+    padding: 8% 0;
+    
+}
+#page7{
+    height: 110vh;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#page7Video{
+    padding: 0;
+    z-index: 1;
+    transition: 0.5s;
+    position: absolute;
+    top: 10%;
+}
+/* #page7:hover #page7Video{
+    transform: scale(1.1);
+} */
+#page7Div{
+    z-index: 2;
+    color: #fff;
+    border-radius: 10px;
+    padding: 6% 6% 4%;
+    text-align: center;
+    background: #ffffff30;
+    position: relative;
+    backdrop-filter: blur(2px);
+}
+#page7Div h1{
+    color: white;
+    margin-bottom:6%;
+}
+#page7Div h6{
+}
+
+.oath{
+    position: absolute;
+    top: 2%;
+    right: 5%;
+
+}
+
+#page{
+    padding: 5%;
+}
+#pageDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#pageDiv h5{
+    color: #554546;
+    text-align: center;
+}
+#pageDiv .btn{
+    width:14vw; 
+    margin: 10% 0 5%;
+    font-family: tcs;
+    padding: 5% 2%;
+}
+
+#SocialMedia{
+    margin: 10% 0;
+    width: 100%;
+}
+.socialM{
+    width: auto;
+    font-size: 4vw;
+    padding:1% 2%;
+    color: #554546;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.socialM::after{
+    content: '';
+}
+
+
+/* fixed */
